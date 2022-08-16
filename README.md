@@ -7,3 +7,5 @@ Part Two :
 this tables shows a sef of employees data an a company
 
 .
+part three
+a form was added to add employees using it
