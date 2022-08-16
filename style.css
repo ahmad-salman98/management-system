@@ -1,9 +1,16 @@
-main {
+body {
+  overflow-y: scroll;
+  height: 100vh;
   background-color: rgba(245, 245, 220, 0.382);
-  height: 70vh;
+}
+
+main {
   display: flex;
   justify-content: center;
+  min-height: 70vh;
+  padding: 50px 0;
 }
+
 .container-fluid {
   background-color: #19033f;
 }
@@ -12,11 +19,32 @@ table {
   border: black 1px solid;
   border-collapse: collapse;
   width: 50%;
+  height: max-content;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: start;
+  gap: 40px;
+}
+select {
+  border-radius: 5px;
+  width: 50%;
+  height: 40px;
 }
 
 header img {
-  height: 10vh;
+  height: 9vh;
 }
+header {
+  height: 15vh;
+  background-color: #19033f;
+  display: grid;
+  align-items: center;
+}
+
 td,
 th {
   border: black solid 1px;
@@ -31,16 +59,21 @@ tr:hover,
 th {
   background-color: rgba(255, 127, 80, 0.968);
 }
-
+tr {
+  height: 10vh;
+}
 footer {
-  height: 15vh;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #19033f;
   margin: 20px 0 0;
 }
-
+input {
+  border-radius: 5px;
+  height: 40px;
+}
 footer .row {
   display: flex;
   flex-direction: column;
@@ -60,4 +93,7 @@ table tr:nth-child(even) {
 }
 table tr:nth-child(even):hover {
   background-color: rgba(255, 127, 80, 0.968);
+}
+label {
+  min-width: fit-content;
 }

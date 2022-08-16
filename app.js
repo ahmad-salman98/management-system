@@ -33,13 +33,13 @@ staff[5] = new employee(1005, "Rana Saleh", "Development", "Junior", "https://ww
 staff[6] = new employee(1006, "Hadi Ahmad", "Finance", "Mid-Senior", "https://blog.hubspot.com/hubfs/employee-retention-rate.jpg")
 
 
-function employeesData(obj) {
-    for (let i = 0; i < obj.length; i++) {
-        console.table(obj[i]);
-        console.log("Salary is: " + obj[i].salary());
-    }
-}
-employeesData(staff);
+// function employeesData(obj) {
+//     for (let i = 0; i < obj.length; i++) {
+//         console.table(obj[i]);
+//         console.log("Salary is: " + obj[i].salary());
+//     }
+// }
+// employeesData(staff);
 
 // _______________ DOM AND ADD ELEMENTS ____________________
 
@@ -70,8 +70,6 @@ tableheadrow.append(employeeID, fullName, department, level, salary);
 
 function addrows(array) {
 
-
-
     const table = document.querySelector("main table")
 
     for (let i = 0; i < array.length; i++) {
@@ -94,8 +92,46 @@ function addrows(array) {
     }
 
 }
+
 addrows(staff);
 
+const form = document.getElementById("form").addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const id = document.getElementById("id").value;
+    const fname = document.getElementById("fullName").value;
+    const department = document.getElementById("department").value;
+    const level = document.getElementById("level").value;
+    const img = document.getElementById("image").value;
+    staff.push(new employee(id, fname, department, level, img));
+
+    let table = document.querySelector("table");
+
+    let rowcount = table.rows.length;
+    let row = table.insertRow(rowcount);
+
+    let newid = row.insertCell(0)
+    newid.innerHTML = (id);
+
+    let newname = row.insertCell(1);
+    newname.innerHTML = (fname);
+
+    let newdepartment = row.insertCell(2);
+    newdepartment.innerHTML = (department);
+
+    let newlevel = row.insertCell(3);
+    newlevel.innerHTML = (level);
+
+    let newsalary = row.insertCell(4);
+    newsalary.innerHTML = (staff[staff.length - 1].salary());
+
+    id = "";
+    fname.value = "";
+    department.value = "";
+    level.value = "";
+    img.value = "";
+}
+);
 
 
 
