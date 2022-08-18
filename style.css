@@ -1,7 +1,6 @@
 body {
   overflow-y: scroll;
   background-color: rgba(245, 245, 220, 0.382);
-  zoom: 1.5;
 }
 header img {
   height: 9vh;
@@ -107,9 +106,9 @@ label {
   min-width: fit-content;
 }
 .buttons input {
-  background-color:rgb(255, 127, 80); 
+  background-color: rgb(255, 127, 80);
   font-size: large;
-  font-weight:600;
+  font-weight: 600;
 }
 
 /* _________ cards style __________ */
