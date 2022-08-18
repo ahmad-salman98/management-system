@@ -10,4 +10,7 @@ this tables shows a sef of employees data an a company
 part three
 a form was added to add employees using it
 
+part Four
+local storage is currently used
+
 https://ahmad-salman98.github.io/management-system/
