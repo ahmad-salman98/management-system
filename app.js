@@ -50,16 +50,17 @@ employee.prototype.calcSalary = function (level) {
 
 
 //  display stored data
+let allEmployees = [];
+let empArr = JSON.parse(localStorage.getItem('Employees'));
+console.log(empArr);
+if (empArr !== null) {
+    allEmployees = empArr;
+    for (let i = 0; i < empArr.length; i++) {
+        addRow(empArr[i]);
+        addCard(empArr[i]);
+    }
 
-const empArr = JSON.parse(localStorage.getItem('Employees'));
-for (let i = 0; i < empArr.length; i++) {
-    addRow(empArr[i]);
-    addCard(empArr[i]);
 }
-
-// _________ submit functionality _______
-
-const allEmployees = empArr;;
 const form = document.getElementById("form");
 form.addEventListener('submit', formToTable);
 function formToTable(event) {
@@ -126,6 +127,8 @@ function addCard(obj) {
     p4.textContent = "Salary: " + obj.salary;
 
 }
+
+
 
 // ________ define clear all button ___________
 const clearAll = document.getElementById("clearAll");
