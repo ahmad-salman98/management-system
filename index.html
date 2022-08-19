@@ -16,7 +16,6 @@
     <body>
         <header>
             <!-- filter , reduce, map, forEach -->
-            <nav class="navbar navbar-expand-lg bg-light py-0 container">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#"><img src="./logo.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,10 +41,6 @@
 
         </header>
         <main class="container gap-5">
-            <div class="row w-100">
-                <form id="form" class="container ">
-                    <input id="id" type="number" min="1000" max="9999" placeholder="Emplyee ID" required>
-                    <input type="text" id="fullName" placeholder="Enter your full name" required>
                     <select id="department">
                         <option value="Adminstration">Adminstration</option>
                         <option value="Finance">Finance</option>
@@ -57,29 +52,6 @@
                         <option value="Mid-Senior">Mid-Senior</option>
                         <option value="Junior">Junior</option>
                     </select>
-                    <input type="url" id="image" placeholder="your image Url">
-                    <div class="buttons d-flex w-75 gap-5">
-                        <input type="submit" id="submitBtn">
-                        <input type="button" id="clearAll" value="Delete All">
-                    </div>
-
-                </form>
-            </div>
-
-            <div class="row  w-75">
-                <table id="table">
-                    <tr>
-                        <th>Emplyee ID</th>
-                        <th>Full Name</th>
-                        <th>Department</th>
-                        <th>Level</th>
-                        <th>Salary</th>
-                    </tr>
-                </table>
-            </div>
-
-            <div id="cards" class="row ">
-            </div>
 
         </main>
         <footer>
@@ -102,4 +74,3 @@
         <script src="./app.js"></script>
     </body>
 
-</html>
